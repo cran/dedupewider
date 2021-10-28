@@ -12,7 +12,7 @@
 
 
 
-<title>Usage and algorithm explained</title>
+<title>Usage and Algorithm Explained</title>
 
 <script src="data:application/javascript;base64,Ly8gUGFuZG9jIDIuOSBhZGRzIGF0dHJpYnV0ZXMgb24gYm90aCBoZWFkZXIgYW5kIGRpdi4gV2UgcmVtb3ZlIHRoZSBmb3JtZXIgKHRvCi8vIGJlIGNvbXBhdGlibGUgd2l0aCB0aGUgYmVoYXZpb3Igb2YgUGFuZG9jIDwgMi44KS4KZG9jdW1lbnQuYWRkRXZlbnRMaXN0ZW5lcignRE9NQ29udGVudExvYWRlZCcsIGZ1bmN0aW9uKGUpIHsKICB2YXIgaHMgPSBkb2N1bWVudC5xdWVyeVNlbGVjdG9yQWxsKCJkaXYuc2VjdGlvbltjbGFzcyo9J2xldmVsJ10gPiA6Zmlyc3QtY2hpbGQiKTsKICB2YXIgaSwgaCwgYTsKICBmb3IgKGkgPSAwOyBpIDwgaHMubGVuZ3RoOyBpKyspIHsKICAgIGggPSBoc1tpXTsKICAgIGlmICghL15oWzEtNl0kL2kudGVzdChoLnRhZ05hbWUpKSBjb250aW51ZTsgIC8vIGl0IHNob3VsZCBiZSBhIGhlYWRlciBoMS1oNgogICAgYSA9IGguYXR0cmlidXRlczsKICAgIHdoaWxlIChhLmxlbmd0aCA+IDApIGgucmVtb3ZlQXR0cmlidXRlKGFbMF0ubmFtZSk7CiAgfQp9KTsK"></script>
 <script src="data:application/javascript;base64,JChkb2N1bWVudCkucmVhZHkoZnVuY3Rpb24oKXsKICAgIGlmICh0eXBlb2YgJCgnW2RhdGEtdG9nZ2xlPSJ0b29sdGlwIl0nKS50b29sdGlwID09PSAnZnVuY3Rpb24nKSB7CiAgICAgICAgJCgnW2RhdGEtdG9nZ2xlPSJ0b29sdGlwIl0nKS50b29sdGlwKCk7CiAgICB9CiAgICBpZiAoJCgnW2RhdGEtdG9nZ2xlPSJwb3BvdmVyIl0nKS5wb3BvdmVyID09PSAnZnVuY3Rpb24nKSB7CiAgICAgICAgJCgnW2RhdGEtdG9nZ2xlPSJwb3BvdmVyIl0nKS5wb3BvdmVyKCk7CiAgICB9Cn0pOwo="></script>
@@ -139,7 +139,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 
 
 
-<h1 class="title toc-ignore">Usage and algorithm explained</h1>
+<h1 class="title toc-ignore">Usage and Algorithm Explained</h1>
 
 
 
@@ -214,7 +214,7 @@ name4
 </div>
 <div id="usage" class="section level2">
 <h2>Usage</h2>
-<p>After attach the package: <code>library(dedupewider)</code>, one function will be available to use: <code>dedupe_wide()</code>. We will show the usage of this function using the table presented below:</p>
+<p>To attach the package, use: <code>library(dedupewider)</code>. We will show the usage of <code>dedupe_wide()</code> function using the table presented below:</p>
 <table class=" lightable-paper" style="font-family: &quot;Arial Narrow&quot;, arial, helvetica, sans-serif; width: auto !important; margin-left: auto; margin-right: auto;">
 <thead>
 <tr>
@@ -441,6 +441,7 @@ NA
 <li>all unique information from column “name” was preserved and these columns were renamed</li>
 <li>for the rest columns (“nace”) just one code was preserved - it is always the data from the row which is closest to the beginning of the table</li>
 <li>order of rows and columns was preserved, <strong>however, it is important to note that for <code>cols_dedupe</code> first element of names passed to it will be used as a base for new names of columns and to determine the place for these columns</strong></li>
+<li><code>NA</code> values were moved to right. If you want different result, like moving them to the left or even top or bottom, check out the <code>na_move</code> function.</li>
 </ul>
 <p>Of course, columns passed to <code>cols_expand</code> are treat as separate columns, so data is not mixed:</p>
 <div class="sourceCode" id="cb3"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>table_deduplicated <span class="ot">&lt;-</span> <span class="fu">dedupe_wide</span>(initial_table, <span class="at">cols_dedupe =</span> <span class="fu">paste0</span>(<span class="st">&quot;tel_&quot;</span>, <span class="dv">1</span><span class="sc">:</span><span class="dv">5</span>),</span>

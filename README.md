@@ -61,7 +61,7 @@ initial_table <- data.frame(tel_1 = c(111, 222, 444, 555),
                             nace = c("01.19", "01.64", "55.90", "09.10"))
 
 # Rows 1, 2 and 3 share the same phone number and thus will be collapsed into one row
-# In row 4 the same phone number will be removed to left only unique entry (555)
+# In row 4 the same phone number will be removed to leave only unique entry (555)
 initial_table
 
 #>   tel_1 tel_2 tel_3 tel_4 tel_5  name  nace
@@ -80,5 +80,5 @@ table_deduplicated
 ```
 
 Please refer to a vignette for step-by-step explanation as well as
-information about algorithm used: [Usage and algorithm
-explained](https://CRAN.R-project.org/package=dedupewider/vignettes/usage-and-algorithm-explained.html)
+information about algorithm used: [Usage and Algorithm
+Explained](https://CRAN.R-project.org/package=dedupewider/vignettes/usage-and-algorithm-explained.html)
